@@ -17,3 +17,12 @@ class Solution {
         return -1;
     }
 }
+
+//OPTIMIZED SOLUTION
+//Based on assumption that all nodes are connected only to center node. Which means that all array entries will have that center node in them.
+class Solution {
+    public int findCenter(int[][] m) {
+        if(m[0][0]==m[1][0] || m[0][0]==m[1][1])return m[0][0];
+        return m[0][1];
+    }
+}
